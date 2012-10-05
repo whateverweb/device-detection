@@ -29,6 +29,45 @@ The service has the following ReSTful verbs and methods defined under the servic
     	{"model_name":"iPhone"}
 
 ---
+* **PUT** /ddr/*deviceId*/*capabilityName*/*capabilityValue*
+
+	Define a custom capability for a device, or device group. The device id must be valid and the capability name cannot override one already defined in the device database.
+
+---
+* **GET** /device
+
+	Get the device id.
+
+---
+* **PUT** /ddr/cset/*capability set name*?*capa=capa1*&*capa=capa2*&*...*
+
+	Define a capability set. Please note that the maximum number of capabilities in a set is limited by the user's price plan.
+
+	Example:
+
+		PUT http://demo.wew.io/ddr/cset/mySet?capa=capa1&capa=capa2
+
+	Successful response:
+
+		HTTP/1.1 201 CREATED
+
+---
+* **GET** /ddr/cset/*capability set name*
+
+	Get a set of capabilities defined by set name, for device calling the service. Capability sets can be defined by using the service, or by using the administration portal at [whateverweb.com](http://whateverweb.com/).
+
+	Example:
+
+		GET http://demo.wew.io/ddr/cset/mySet
+
+	The response for a request made from an iPhone will be:
+
+		HTTP/1.1 200 OK
+		Content-Type: application/json
+
+		{"capa1":"first capa value","capa2":"second capa value"}
+
+---
 * **GET** /ddr/capabilities
 
 	Get all capabilities, for device calling the service
