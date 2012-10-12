@@ -1,6 +1,6 @@
 # Device detection repository at wew.io
 
-### Intro
+### Introduction
 The device detection service implements server side device detection. It enables querying for different device capabilities as defined by [WURFL](http://wurfl.sourceforge.net).
 The service also enables you to add your own customized device capabilities, for instance based on some tacit knowledge, to extend the standard WURFL database. Custom capabilities are defined per application using the interface at [whateverweb.com](http://whateverweb.com).
 
@@ -10,7 +10,7 @@ The service also enables you to add your own customized device capabilities, for
 
 ### The service
 
-The service has the following ReSTful verbs and methods defined under the service URL:
+The service has the following RESTful verbs and methods defined under the service URL:
 
 ---
 * **GET** /ddr/c/*capability_name*
@@ -89,7 +89,7 @@ The service has the following ReSTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/capabilities
+		GET http://demo.wew.io/ddr/capabilityNames
 
 	The response for a request made from an iPhone will be:
 
