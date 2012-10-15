@@ -46,5 +46,15 @@ The service has the following RESTful verbs and methods defined under the servic
 ---
 * **GET** /ddr/capabilitySet
 
-	To be documented
+	Get a set of capabilities defined by set name, for device calling the service. Capability sets can be defined by using the service, or by using the administration portal at [whateverweb.com](http://whateverweb.com).
 
+	Example:
+
+		GET http://demo.wew.io/ddr/cset/*capability set name*
+
+	The response for a request made from an iPhone will be:
+
+		HTTP/1.1 200 OK
+		Content-Type: application/json
+
+		{"capa1":"first capa value","capa2":"second capa value"}
