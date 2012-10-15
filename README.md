@@ -44,13 +44,13 @@ The service has the following RESTful verbs and methods defined under the servic
 		{"screensaver_greyscale":"false","fl_wallpaper":"false","columns":"20","mms_xmf":"false","wta_phonebook":"false","viewport_supported":"true","mms_wml":"false","ringtone_directdownload_size_limit":"0","ringtone_xmf":"false",...}
 
 ---
-* **GET** /ddr/capabilitySet
+* **GET** /ddr/cset/*capability set name*
 
 	Get a set of capabilities defined by set name, for device calling the service. Capability sets can be defined by using the service, or by using the administration portal at [whateverweb.com](http://whateverweb.com).
 
 	Example:
 
-		GET http://demo.wew.io/ddr/cset/*capability set name*
+		GET http://demo.wew.io/ddr/cset/myCapabilitySet
 
 	The response for a request made from an iPhone will be:
 
