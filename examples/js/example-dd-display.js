@@ -1,4 +1,4 @@
-var MTDD = new MTDD('finn');
+var MTDD = new MTDD('demo');
 
 function appendOption(text)
 {
