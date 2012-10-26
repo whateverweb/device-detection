@@ -94,6 +94,7 @@ The service has the following RESTful verbs and methods defined under the servic
 		["apple_iphone_ver4","apple_iphone_ver3_1_3","apple_iphone_ver2_1","apple_iphone_ver2","generic"]
 
 	Other response codes:
+
 		*204 No Content*: device id has no ancestors (is top level device)
 		*400 Bad Request*: unknown device id
 
@@ -115,6 +116,7 @@ The service has the following RESTful verbs and methods defined under the servic
 		{"appId":"82f2acb6-c5df-4034-ba00-95e6ae2ad3e9","deviceId":"apple_iphone_ver4","capabilityName":"highDPI","capabilityValue":"true"}
 
 	Other responses:
+
 		*400 Bad Request*: Unknown device id
 		*400 Bad Request*: Attempt to override standard (WURFL) capability
 
@@ -135,6 +137,7 @@ The service has the following RESTful verbs and methods defined under the servic
 		[{"appId":"82f2acb6-c5df-4034-ba00-95e6ae2ad3e9","deviceId":"generic_android_ver4","capabilityName":"highDPI","capabilityValue":"maybe"},{"appId":"82f2acb6-c5df-4034-ba00-95e6ae2ad3e9","deviceId":"apple_iphone_ver4","capabilityName":"highDPI","capabilityValue":"true"}]
 
 	Other response codes:
+
 		*204 No Content*: No custom capabilities defined for application
 
 ---
@@ -156,6 +159,7 @@ The service has the following RESTful verbs and methods defined under the servic
 		HTTP/1.1 201 Created
 
 	Other response codes:
+
 		*400 Bad request*: Attempt to create capability set with no capability keys
 
 ---
@@ -174,4 +178,5 @@ The service has the following RESTful verbs and methods defined under the servic
 		{"name":"myBrandModelSet","capabilityNames":["brand_name","model_name"]}
 
 	Other response codes:
+	
 		*204 No content*: Application has no capability sets defined, or the requested capability set is not defined
