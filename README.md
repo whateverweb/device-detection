@@ -1,14 +1,16 @@
 # Device detection repository at wew.io
 
+This document describes both basic and advanced usage of the device detection service, including methods used to define custom capability and capability sets. If you just want to use the basic service, for instance from your client-side javascript, you would probably be better off with the basic documentation at [device-detecion GitHub page](http://github.com/whateverweb/device-detection).
+
 ### Introduction
 The device detection service implements server side device detection. It enables querying for different device capabilities as defined by [WURFL](http://wurfl.sourceforge.net).
-The service also enables you to add your own customized device capabilities, for instance based on some tacit knowledge, to extend the standard WURFL database. Custom capabilities are defined per application using the interface at [whateverweb.com](http://whateverweb.com).
+The service also enables you to add your own customized device capabilities, for instance based on some tacit knowledge, to extend the standard WURFL database. Custom capabilities could be defined per application using the interface at [whateverweb.com](http://whateverweb.com), or by using the methods described in this document.
 
 ### Getting started
 1. Sign up for a free account at [whateverweb.com](http://whateverweb.com/)
 2. Register an application to get an application key and service URL.
 
-### The service
+### Basic usage
 
 The service has the following RESTful verbs and methods defined under the service URL:
 
@@ -31,7 +33,7 @@ The service has the following RESTful verbs and methods defined under the servic
 ---
 * **GET** /ddr/capabilities
 
-	Get all capabilities, for device calling the service
+	Get all capabilities, for device calling the service. Capabilities in response will include custom capabilities if defined for calling device, or any of its "WURFL-ancestors".
 
 	Example:
 
