@@ -46,6 +46,22 @@ The service has the following RESTful verbs and methods defined under the servic
 		{"screensaver_greyscale":"false","fl_wallpaper":"false","columns":"20","mms_xmf":"false","wta_phonebook":"false","viewport_supported":"true","mms_wml":"false","ringtone_directdownload_size_limit":"0","ringtone_xmf":"false",...}
 
 ---
+* **GET** /ddr/cset/
+
+	Get a predefined set of capabilities, for device calling the service. This special, built-in capability set contains some of the most frequently used capabilites. It provides an easy way to limit the amount of data returned from the service.
+
+	Example:
+
+		GET http://demo.wew.io/ddr/cset/
+
+	The response for a request made from an iPhone will be:
+
+		HTTP/1.1 200 OK
+		Content-Type: application/json
+
+		{"device_os":"iPhone OS","device_os_version":"4.0","is_tablet":"false","max_image_width":"320","max_image_height":"480","mobile_browser":"Safari","model_name":"iPhone","brand_name":"Apple"}
+
+---
 * **GET** /ddr/cset/*capability set name*
 
 	Get a set of capabilities defined by set name, for device calling the service. Capability sets can be defined by using the service, or by using the administration portal at [whateverweb.com](http://whateverweb.com).
