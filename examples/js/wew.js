@@ -58,6 +58,12 @@ wew.prototype.inCache = function(storageKey) {
 wew.prototype.askCloud = function (url,storageKey,callback) {
 		var http = this.httpObj();
 		var storage = this.storage;
+		var orientation = window.orientation || "";
+		var height = screen.height || "";
+		var width = screen.width || "";
+		var pixelratio = window.devicePixelRatio || "";
+		url = url +"?o="+orientation+"&h="+height+"&w="+width+"&p="+pixelratio;
+		console.log(url);
 		http.open('GET', url, true);
 		http.onreadystatechange = function (){
 			if (http.status == 200 && http.readyState == 4) {
