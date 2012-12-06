@@ -136,6 +136,23 @@ The service has the following RESTful verbs and methods defined under the servic
 		*400 Bad Request*: Unknown device id
 		*400 Bad Request*: Attempt to override standard (WURFL) capability
 
+	**Batching** example:
+
+		POST http://demo.wew.io/custom/apple_iphone_ver4,windows_8_rt_ver1/highDPI/true
+
+	**Batching** example response:
+
+		HTTP/1.1 201 Created
+		Content-Type: application/json
+
+		Capability set for 2 devices
+
+	Other **batching** responses:
+
+		*201 Created: "Capability set for *N* devices"  -- where N is lower than device count meaning a partial success
+		*400 Bad Request*: Unknown id
+
+
 ---
 * **GET** /ddr/custom?deviceId=*device id*
 
