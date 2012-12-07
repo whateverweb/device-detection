@@ -122,7 +122,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		POST http://demo.wew.io/custom/apple_iphone_ver4/highDPI/true
+		POST http://demo.wew.io/ddr/custom/apple_iphone_ver4/highDPI/true
 
 	Example response:
 
@@ -138,7 +138,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	**Batching** example:
 
-		POST http://demo.wew.io/custom/apple_iphone_ver4,windows_8_rt_ver1/highDPI/true
+		POST http://demo.wew.io/ddr/custom/apple_iphone_ver4,windows_8_rt_ver1/highDPI/true
 
 	**Batching** example response:
 
@@ -160,7 +160,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/custom
+		GET http://demo.wew.io/ddr/custom
 
 	Example response:
 
