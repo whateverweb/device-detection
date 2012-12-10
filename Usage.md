@@ -152,6 +152,22 @@ The service has the following RESTful verbs and methods defined under the servic
 		*201 Created: "Capability set for *N* devices"  -- where N is lower than device count meaning a partial success
 		*400 Bad Request*: Unknown id
 
+---
+* **DELETE** /ddr/custom/*device id*/*capability name*
+
+	Delete a defined custom capability for a device id.
+
+	Example:
+		DELETE /ddr/custom/apple_iphone_ver4/highDPI
+
+	Example response:
+
+		HTTP/1.1 200 OK
+
+	Other response codes:
+
+		*304 Not modified*: Capability is not defined for given device and cannot be deleted
+		*400 Bad request: Device id not found in device repository, or attempt to delete a builtin capability
 
 ---
 * **GET** /ddr/custom?deviceId=*device id*
