@@ -115,6 +115,22 @@ The service has the following RESTful verbs and methods defined under the servic
 		*400 Bad Request*: unknown device id
 
 ---
+* **GET** /ddr/capabilityNames
+
+	Get a list of all available capability names. This will also include application's custom capabilities, if any.
+
+	Example:
+
+		GET http://demo.wew.io/ddr/capabilityNames
+
+	Example response:
+
+		HTTP/1.1 200 OK
+		Content-Type: application/json
+
+		["screensaver_greyscale","fl_wallpaper","mms_xmf", ... ]
+
+---
 * **POST** /ddr/custom/*device id*/*capability name*/*capability value*
 
 	Create, or update, a custom capability for a device, or device group. The capability name (key) cannot be defined in the official WURFL repository.
