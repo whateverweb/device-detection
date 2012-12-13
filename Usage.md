@@ -245,3 +245,16 @@ The service has the following RESTful verbs and methods defined under the servic
 	Other response codes:
 	
 		*204 No content*: Application has no capability sets defined, or the requested capability set is not defined
+
+---
+* **DELETE** /ddr/cset/def/*set name*
+
+	Delete a capability set definition.
+
+	Example:
+		DELETE http://demo.wew.io/ddr/cset/def/myBrandModelSet
+
+	Example response:
+
+		HTTP/1.1 OK
+
