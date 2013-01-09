@@ -22,31 +22,40 @@
     </footer>
 </div> <!--! end of #container -->
     <!-- include the API-->
-    <script src="../js/MTDD.js"></script>
+    <script src="../js/wew.js"></script>
     <script type="text/javascript">
     /* init */
-    var MTDD = new MTDD('demo');
+    var WEW = WEW || {};
+    WEW.opts ={"ttl":"1000","appID":"demo"};
+    var w=new wew(WEW);
     /* Ask for capas to send to GA */
-    var pointing_method = MTDD.getCapability("pointing_method");
-    console.log("pointing_method detected: " + pointing_method);
+    w.getCap("pointing_method",cb);
+
+
+
+    
     var _gaq = _gaq || [];
     /* Your GA account */
     _gaq.push(['_setAccount', 'UA-XXXXX-X']);
     _gaq.push(['_trackPageview']);
+    
+    function cb(t){
+        console.log("pointing_method detected: " + t.pointing_method);
+            _gaq.push(['_setCustomVar',
+                1,              
+                'pointing_method',      
+                t.pointing_method
+            ]);
+        console.log("Custom var: " + _gaq);
+    }
 
     /* Log to GA */
-    _gaq.push(['_setCustomVar',
-      1,              
-      'pointing_method',      
-       pointing_method
-    ]);
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-console.log("Custom var: " + _gaq[2]);
 </script>
 </body>
 </html>
