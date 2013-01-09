@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/modernizr.js"></script>
+</head>
+<body>
+
+<div id="container">
+	<header>
+	<h1>False positives</h1>
+	</header>
+	<div id="main" role="main">
+	<h2>Handling false positives from Modernizr</h2>
+	<p>
+		False positives is anoying. In this example we are handling the <a href="https://github.com/Modernizr/Modernizr/issues/372">issue with Blackberry Bold 9650</a> which is claiming touch support.
+	</p>
+
+</div>
+	<footer>
+
+	</footer>
+</div> <!--! end of #container -->
+	    <script src="../js/wew.js"></script>
+	    <script type="text/javascript">
+	    	var really_touch=false;
+		    /* init */
+			var WEW = WEW || {};
+			WEW.opts ={"ttl":"1000","appID":"demo"};
+			var w=new wew(WEW);
+		    w.getCap("model_name",cb);
+
+		    function cb(c){
+		    	if(c.model_name == "BlackBerry 9650"){
+		    		really_touch =false;
+		    	}else{
+		    		really_touch=Modernizr.touch;
+		    	}
+			    console.log(really_touch);
+		    }
+	    </script>
+</body>
+</html>
