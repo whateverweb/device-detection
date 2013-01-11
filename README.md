@@ -16,7 +16,7 @@ The service API is "RESTful". That means that you can use it however you want; f
 
 ### Basic usage
 
-** NOTE: If you plan to use the API from server side code, make sure to duplicate the HTTP headers from the requesting user agent as these are used to identify the device. **
+** NOTE: If you plan to use the API from server side code, make sure to relay the HTTP headers from the requesting user agent as these are used to identify the device. **
 
 The service has the following RESTful verbs and methods defined under the service URL:
 
