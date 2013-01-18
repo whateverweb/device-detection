@@ -21,7 +21,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/c/model_name
+		GET http://ddr.demo.wew.io/c/model_name
 
 	The response for a request made from an iPhone will be:
 
@@ -37,7 +37,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/capabilities
+		GET http://ddr.demo.wew.io/capabilities
 
 	The response for a request made from an iPhone will be:
 
@@ -52,7 +52,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/cset/
+		GET http://ddr.demo.wew.io/cset/
 
 	The response for a request made from an iPhone will be:
 
@@ -68,7 +68,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/cset/myCapabilitySet
+		GET http://ddr.demo.wew.io/cset/myCapabilitySet
 
 	The response for a request made from an iPhone will be:
 
@@ -84,7 +84,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/device
+		GET http://ddr.demo.wew.io/device
 
 	The response for a request made from an iPhone, iOS 5.1 will be:
 
@@ -100,7 +100,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/ancestor/apple_iphone_ver5_1
+		GET http://ddr.demo.wew.io/ancestor/apple_iphone_ver5_1
 
 	Example response:
 
@@ -121,7 +121,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/capabilityNames
+		GET http://ddr.demo.wew.io/capabilityNames
 
 	Example response:
 
@@ -138,7 +138,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		POST http://demo.wew.io/ddr/custom/apple_iphone_ver4/highDPI/true
+		POST http://ddr.demo.wew.io/custom/apple_iphone_ver4/highDPI/true
 
 	Example response:
 
@@ -154,7 +154,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	**Batching** example:
 
-		POST http://demo.wew.io/ddr/custom/apple_iphone_ver4,windows_8_rt_ver1/highDPI/true
+		POST http://ddr.demo.wew.io/custom/apple_iphone_ver4,windows_8_rt_ver1/highDPI/true
 
 	**Batching** example response:
 
@@ -192,7 +192,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/custom
+		GET http://ddr.demo.wew.io/custom
 
 	Example response:
 
@@ -217,7 +217,7 @@ The service has the following RESTful verbs and methods defined under the servic
 	In this example I want to know the brand and model name of the calling devices.
 
 	Example:
-		POST http://demo.wew.io/ddr/cset/def/myBrandModelSet?capa=brand_name&capa=model_name
+		POST http://ddr.demo.wew.io/cset/def/myBrandModelSet?capa=brand_name&capa=model_name
 
 	Example response:
 
@@ -233,7 +233,7 @@ The service has the following RESTful verbs and methods defined under the servic
 	Get capability set definition. Omit the setName query parameter to fetch all capability set definitions.
 
 	Example:
-		GET http://demo.wew.io/ddr/cset/def?setName=myBrandModelSet
+		GET http://ddr.demo.wew.io/cset/def?setName=myBrandModelSet
 
 	Example response:
 
@@ -252,7 +252,7 @@ The service has the following RESTful verbs and methods defined under the servic
 	Delete a capability set definition.
 
 	Example:
-		DELETE http://demo.wew.io/ddr/cset/def/myBrandModelSet
+		DELETE http://ddr.demo.wew.io/cset/def/myBrandModelSet
 
 	Example response:
 

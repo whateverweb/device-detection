@@ -27,7 +27,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/c/model_name
+		GET http://ddr.demo.wew.io/c/model_name
 
 	The response for a request made from an iPhone will be:
 
@@ -43,7 +43,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/capabilities
+		GET http://ddr.demo.wew.io/capabilities
 
 	The response for a request made from an iPhone will be:
 
@@ -58,7 +58,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/cset/
+		GET http://ddr.demo.wew.io/cset/
 
 	The response for a request made from an iPhone will be:
 
@@ -74,7 +74,7 @@ The service has the following RESTful verbs and methods defined under the servic
 
 	Example:
 
-		GET http://demo.wew.io/ddr/cset/myCapabilitySet
+		GET http://ddr.demo.wew.io/cset/myCapabilitySet
 
 	The response for a request made from an iPhone will be:
 
