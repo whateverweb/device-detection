@@ -14,7 +14,7 @@ wew.prototype.getSet = function (setName,callback){
 	
 	var cached=this.inCache(storageKey);
 	if(!cached){
-		this.askCloud('http://'+this.appid+'.wew.io/ddr/cset/',storageKey, callback);
+		this.askCloud('http://ddr.'+this.appid+'.wew.io/cset/',storageKey, callback);
 	}else{
 		callback(cached);
 	}
@@ -28,7 +28,7 @@ wew.prototype.getCap = function(capabilityName, callback) {
 	
 	var cached=this.inCache(storageKey);
 	if(!cached){
-		this.askCloud('http://'+this.appid+'.wew.io/ddr/c/'+capabilityName,storageKey, callback);
+		this.askCloud('http://ddr.'+this.appid+'.wew.io/c/'+capabilityName,storageKey, callback);
 	}else{
 		callback(cached);
 	}

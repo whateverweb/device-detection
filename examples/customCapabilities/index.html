@@ -12,12 +12,12 @@
 
 <div id="container">
 	<header>
-	<h1>Capability sets</h1>
+	<h1>Custom Capabilities</h1>
 	</header>
 	<div id="main" role="main">
-	<h2>Your favourite capabilities</h2>
+	<h2>Your very own capability</h2>
 	<p>
-		whateverweb.com allows you to create custom sets of capabilities which are relevant to your site, and leaves the other stuff out.
+		whateverweb.com allows you to create your own capabilities which are relevant to your site.
 	</p>
 	<p>
 		Huh? Demo?  View source and see your JavaScript console.
@@ -35,7 +35,7 @@
 			var WEW = WEW || {};
 			WEW.opts ={"ttl":"1000","appID":"demo"};
 			var w=new wew(WEW);
-		    w.getSet("myset",cb);
+		    w.getCap("MyCap",cb);
 
 		    function cb(c){
 		    	console.log(c);
