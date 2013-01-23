@@ -17,11 +17,11 @@ function MTDD(appid) {
 }
 
 MTDD.prototype.getCapability = function (capabilityName) {
-	return this.getSingleCapability(capabilityName, 'http://'+this.appid+'.wew.io/ddr/c/'+capabilityName, 'cs.');
+	return this.getSingleCapability(capabilityName, 'http://ddr.'+this.appid+'.wew.io/c/'+capabilityName, 'cs.');
 },
 
 MTDD.prototype.getCapabilities = function() {
-	return this.getSingleCapability(null, 'http://'+this.appid+'.wew.io/ddr/capabilities/', 'ca.');
+	return this.getSingleCapability(null, 'http://ddr.'+this.appid+'.wew.io/capabilities/', 'ca.');
 },
 
 MTDD.prototype.getSingleCapability = function(capabilityName, url, storagePrefix) {
@@ -77,7 +77,7 @@ MTDD.prototype.getSingleCapability = function(capabilityName, url, storagePrefix
 MTDD.prototype.getCapabilityNames = function() {
 	var http = new XMLHttpRequest();
 	http.overrideMimeType("application/json");
-	http.open('GET', 'http://'+this.appid+'.wew.io/ddr/capabilityNames/', false);
+	http.open('GET', 'http://ddr.'+this.appid+'.wew.io/capabilityNames/', false);
 	http.send();
 	var capabilityNames = JSON.parse(http.responseText);
 }
