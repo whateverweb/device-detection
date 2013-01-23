@@ -47,3 +47,7 @@ Parameters:
 	function callback(t){
         console.log(t);
     }
+
+[Live demo 1](http://demo.wew.io/device-detection/examples/APIdemo/index.html)
+
+[Live demo 2](http://demo.wew.io/device-detection/examples/APIdemo/index2.html)
