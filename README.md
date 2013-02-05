@@ -82,3 +82,7 @@ The service has the following RESTful verbs and methods defined under the servic
 		Content-Type: application/json
 
 		{"capa1":"first capa value","capa2":"second capa value"}
+
+### List of capabilties
+
+A searchable list of current WURFL capabilities can be found over at [ScientiaMobile](http://www.scientiamobile.com/wurflCapability/tree).
