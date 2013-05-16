@@ -1,4 +1,3 @@
-
 function wew(WEW){
 	'use strict';
 	this.uid = new Date;
@@ -66,7 +65,7 @@ wew.prototype.askCloud = function (url,storageKey,callback) {
 		console.log(url);
 		http.open('GET', url, true);
 		http.onreadystatechange = function (){
-			if (http.status == 200 && http.readyState == 4) {
+			if (http.readyState == 4 && http.status == 200) {
 	    		if(storage) {
 	    			var capability = JSON.parse(http.responseText);
 	    			var i =0;
