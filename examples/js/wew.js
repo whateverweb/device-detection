@@ -57,9 +57,13 @@ wew.prototype.inCache = function(storageKey) {
 wew.prototype.askCloud = function (url,storageKey,callback) {
 		var http = this.httpObj();
 		var storage = this.storage;
+		var w=window,d=document,
+			e=d.documentElement,g=d.getElementsByTagName('body')[0],
+			x=w.innerWidth||e.clientWidth||g.clientWidth,
+			y=w.innerHeight||e.clientHeight||g.clientHeight;
 		var orientation = window.orientation || "";
-		var height = screen.height || "";
-		var width = screen.width || "";
+		var height = y || "";
+		var width = x || "";
 		var pixelratio = window.devicePixelRatio || "";
 		url = url +"?o="+orientation+"&h="+height+"&w="+width+"&p="+pixelratio;
 		console.log(url);
