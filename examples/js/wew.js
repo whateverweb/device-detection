@@ -49,9 +49,8 @@ wew.prototype.inCache = function(storageKey) {
 		} catch(e) {
 		
 		}
-	}else{
-		return capability;
 	}
+	return capability;
 },
 
 wew.prototype.askCloud = function (url,storageKey,callback) {
