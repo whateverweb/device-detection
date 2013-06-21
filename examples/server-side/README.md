@@ -7,3 +7,5 @@ Only thing to be aware of is that you should pass the HTTP headers from the user
 			if ($key !="Host") 
 			  $this->headers[] = $key . ': ' . $value;
 		}
+
+[Read more](http://docs.whateverweb.com/documentation/using-the-device-detection-server-side/)
