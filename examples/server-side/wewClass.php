@@ -10,7 +10,7 @@ class wewAPI{
 	
 	public function get($capa){
 		foreach(getallheaders() as $key => $value) {
-			if ($key !="Host") 
+			if ($key !="Host" && $key !="Accept-Encoding")
 			  $this->headers[] = $key . ': ' . $value;
 		}
 		$url = $this->service . $capa;
