@@ -4,7 +4,7 @@ A quick and dirty example asking for one single capability. Some cahceing should
 */
 class wewAPI{
 	
-	private $service="http://demo.wew.io/ddr/c/";		
+	private $service="http://ddr.demo.wew.io/c/";		
 	private $response ="";
 	private $headers = "";
 	
